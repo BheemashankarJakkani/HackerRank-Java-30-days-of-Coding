@@ -1,0 +1,43 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String my1;
+        int t=sc.nextInt();
+        for(int j=0;j<t;j++)
+        {
+          my1=sc.next();
+          sol(my1);
+          
+        }
+        sc.close();
+    }
+    public static void sol(String my){
+        char[] myarr=my.toCharArray();
+        for(int i=0;i<my.length();i++){
+            if(i%2==0)
+            {
+                System.out.print(myarr[i]);
+            }
+        }
+        System.out.print(" ");
+        for(int i=0;i<my.length();i++)
+        {
+            if(i%2!=0)
+            {
+                System.out.print(myarr[i]);
+            }
+
+        }
+        System.out.println();
+        
+        
+    }
+}
+
