@@ -1,0 +1,32 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args)throws Exception {
+       BufferedReader in=new BufferedReader(new InputStreamReader(System.in));
+       String  st[]=in.readLine().split(" ");
+       int ad=Integer.parseInt(st[0]);
+       int am=Integer.parseInt(st[1]);
+       int ay=Integer.parseInt(st[2]);
+       String rdate[]=in.readLine().split(" ");
+       int ed=Integer.parseInt(rdate[0]);
+       int em=Integer.parseInt(rdate[1]);
+       int ey=Integer.parseInt(rdate[2]);
+       int fine=0;
+       int check;
+       if(ay>ey)
+          fine=10000;
+       else if(ay==ey && am>em )
+           fine=500*(am-em);
+       else if(ay==ey && am==em && ad>ed)
+          fine=15*(ad-ed);
+      else 
+         fine=0;
+
+     System.out.println(fine);
+       
+    
+ }
+}
+
